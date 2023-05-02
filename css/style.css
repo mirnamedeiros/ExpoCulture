@@ -11,6 +11,18 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+.color-1 {
+    color: #211E1F;
+}
+
+.color-2 {
+    color: #ED7368;
+}
+
+.color-3 {
+    color: #9FCAB8;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -22,6 +34,12 @@ body {
 
 div {
     margin-bottom: 1.8rem;
+}
+
+.icon{
+    margin-bottom: 0px;
+    width: 200px;
+    height: 100px; 
 }
 
 .location {
@@ -79,13 +97,12 @@ br {
 .title {
     font-size: 2em;
     margin-bottom: 10rem;
+    margin-top: 3rem;
 }
 
 .subtitle {
     font-size: 1.5em;
-    color: #ED7368;
 }
-
 
 header {
     max-width: 100%;
@@ -112,6 +129,18 @@ header {
     background-color: #211E1F;
 }
 
+.week-events {
+    display: flex;
+    flex-direction: column;
+}
+
+.week-text {
+    background-color: #F1A59A;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 @media only screen and (max-widht:768px) {
     .container{
         width: 90%;
@@ -124,4 +153,155 @@ header {
     .container img {
         display: none;
     }
+}
+
+div.cards {
+    display: flex;
+    padding: 32px;
+    justify-content: center;
+}
+
+div.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #9FCAB8;
+    padding: 1rem 1rem;
+    max-height: 468px;
+    margin-left: 32px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+div.cards section.card:first-child {
+    margin-left: 0;
+}
+
+div.cards section.card .icon {
+    width: 184px;
+    height: 184px;
+}
+
+div.cards section.card img {
+    width: 100%;
+}
+
+div.cards section.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+div.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+div.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+div.cards section.card.contact button {
+    background: linear-gradient(to right, #9F66FF, #DFCBFF);
+}
+div.cards section.card.shop button {
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+}
+div.cards section.card.about button {
+    background: linear-gradient(to right, #FE5F8F, #FFC7D9);
+}
+
+div.cards section.card.contact {
+    box-shadow: 20px 20px 50px -30px #DBC4FF;
+}
+div.cards section.card.shop {
+    box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+div.cards section.card.about {
+    box-shadow: 20px 20px 50px -30px #FFC1D5;
+}
+
+@media screen and (max-width: 720px) {
+    div.cards {
+        flex-direction: column;
+    }
+
+    div.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    div.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    div.cards section.card button {
+        font-size: 70%;
+    }
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: #009495;
+    color: #E5E2D0;
+    border-radius: 20px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    border: none;
+    height: 65px;
+}
+
+.register {
+    width: 100%;
+    height: 700px;
+    background-image: url("../assets/map.png");
+    background-color: #ED7368;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.register h1 {
+    width: 300px;
+    text-align: center;
+    font-size: 2.7em;
+}
+
+footer {
+    background-color: #9FCAB8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.footer-item {
+    float: left;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.footer-item + .footer-item {
+    border-left: 3px solid #F59435;
 }
