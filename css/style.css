@@ -110,7 +110,7 @@ header {
 	display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 200px;
+    padding: 20px 20%;
     position: sticky;
     top: 0px;
     background-color: #E5E2D0;
@@ -139,20 +139,6 @@ header {
     height: 80px;
     display: flex;
     justify-content: flex-end;
-}
-
-@media only screen and (max-widht:768px) {
-    .container{
-        width: 90%;
-    }
-
-    .container .text-block {
-        width: 100%;
-    }
-
-    .container img {
-        display: none;
-    }
 }
 
 div.cards {
@@ -210,46 +196,6 @@ div.cards section.card button {
     margin-bottom: 16px 0;
 }
 
-div.cards section.card.contact button {
-    background: linear-gradient(to right, #9F66FF, #DFCBFF);
-}
-div.cards section.card.shop button {
-    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
-}
-div.cards section.card.about button {
-    background: linear-gradient(to right, #FE5F8F, #FFC7D9);
-}
-
-div.cards section.card.contact {
-    box-shadow: 20px 20px 50px -30px #DBC4FF;
-}
-div.cards section.card.shop {
-    box-shadow: 20px 20px 50px -30px #AFD6FF;
-}
-div.cards section.card.about {
-    box-shadow: 20px 20px 50px -30px #FFC1D5;
-}
-
-@media screen and (max-width: 720px) {
-    div.cards {
-        flex-direction: column;
-    }
-
-    div.cards section.card {
-        margin-left: 0;
-        margin-bottom: 32px;
-    }
-
-    div.cards section.card:last-child {
-        margin-bottom: 0;
-    }
-
-    div.cards section.card button {
-        font-size: 70%;
-    }
-
-}
-
 .btn {
     display: flex;
     justify-content: center;
@@ -304,4 +250,55 @@ footer {
 
 .footer-item + .footer-item {
     border-left: 3px solid #F59435;
+}
+
+/* responsive details */
+
+@media screen and (min-width: 720px) {
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    div.cards {
+        flex-direction: column;
+    }
+
+    div.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    div.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    div.cards section.card button {
+        font-size: 70%;
+    }
+
+    #nav-popular, #nav-week, #btn-search {
+        display: none;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .container .text {
+        width: 100%;
+    }
+
+    .container img {
+        display: none;
+    }
+
+    #week p {
+        font-size: 1em;
+    }
+
+    .week-text {
+        align-items: center;
+    }
 }
