@@ -417,3 +417,14 @@ footer {
         align-items: center;
     }
 }
+
+@media screen and (max-width: 935px) {
+    .content-popular {
+        height: 70%;
+        width: 90%;
+    }
+
+    .popular {
+        height: 330px;
+    }
+}
