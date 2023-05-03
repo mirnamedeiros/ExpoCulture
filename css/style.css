@@ -69,6 +69,52 @@ div {
     height: 39px;
 }
 
+.search-box{
+    background: #f59435;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box img{
+    height: 20px;
+    width: 20px;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    padding: 0;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.search-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f59435;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5px;
+}
+
+.search-box:hover > .search-txt {
+    width: 150px;
+    padding: 0 6px;
+}
+
+.search-txt::-webkit-input-placeholder {
+    color: #fff;
+}
+
 .img-woman {
     width: 423px;
     height: 423px;
