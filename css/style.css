@@ -127,6 +127,75 @@ header {
     width: 100%;
     height: 600px;
     background-color: #211E1F;
+    
+}
+
+.content-popular {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 520px;
+    width: 935px;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.navigation-popular {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.popular input{
+    display: none;
+}
+
+.slides {
+    width: 500%;
+    display: flex;
+}
+
+.slide-popular {
+    width: 20%;
+    transition: .6s;
+}
+
+.slide-popular img{
+    width: 100%;
+    height: 100%;
+}
+
+.slide-bar {
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.slide-bar:hover {
+    background-color: #ed7368;
+}
+
+#slide-1:checked ~ .current-image{
+    margin-left: 0;
+}
+
+#slide-2:checked ~ .current-image{
+    margin-left: -20%;
+}
+
+#slide-3:checked ~ .current-image{
+    margin-left: -40%;
+}
+
+#slide-4:checked ~ .current-image{
+    margin-left: -60%;
 }
 
 .week-events {
