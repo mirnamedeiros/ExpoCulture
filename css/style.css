@@ -76,6 +76,7 @@ div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0px;
 }
 
 .search-box img{
@@ -244,6 +245,33 @@ header {
     margin-left: -60%;
 }
 
+.event-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: #009495;
+    margin-bottom: 0;
+    color: #211e1f;
+}
+
+.info img {
+    width: 50%;
+    height: 100%;
+}
+
+.info p {
+    padding: 30px;
+}
+
 .week-events {
     display: flex;
     flex-direction: column;
@@ -260,6 +288,10 @@ div.cards {
     display: flex;
     padding: 32px;
     justify-content: center;
+}
+
+div.cards section.card:hover {
+    background-color: #009495;
 }
 
 div.cards section.card {
@@ -369,11 +401,11 @@ footer {
 
 /* responsive details */
 
-@media screen and (min-width: 720px) {
+/* @media screen and (min-width: 720px) {
     #menu {
         display: none;
     }
-}
+} */
 
 @media screen and (max-width: 720px) {
     div.cards {
@@ -415,6 +447,15 @@ footer {
 
     .week-text {
         align-items: center;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info img {
+        width: 100%;
+        height: auto;
     }
 }
 

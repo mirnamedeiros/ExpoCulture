@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <img src="assets/logo.png" class="logo" alt="Logo ExpoCulture">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo ExpoCulture" class="logo"></a>
         <a id="nav-popular" href="#popular">POPULAR</a>
         <a id="nav-week" href="#week">NESTA SEMANA</a>
         
@@ -24,7 +24,6 @@
                 <img src="./assets/lupa.svg" alt="Icone para abrir o campo para procurar eventos"/>
             </a>
         </div>
-        <i id="menu"class="fa-solid fa-bars"></i>
     </header>
     <div class="location">
         <div class="container col-6">
@@ -70,21 +69,21 @@
         </div>
     
         <div class="cards">
-            <section class="card contact">
+            <section class="card" onclick="location.href='info-event.html'">
                 <div class="icon">
-                    <img src="assets/festival.jpg" alt="Contact us.">
+                    <img src="assets/festival.jpg" alt="festival com pessoas dancando">
                 </div>
                 <h3>Festival</h3>
             </section>
-            <section class="card shop">
+            <section class="card" onclick="location.href='info-event.html'">
                 <div class="icon">
-                    <img src="assets/cestos.png" alt="Shop here.">
+                    <img src="assets/cestos.png" alt="cestos artesanais">
                 </div>
                 <h3>Feira de Artesanato</h3>
             </section>
-            <section class="card about">
+            <section class="card" onclick="location.href='info-event.html'">
                 <div class="icon">
-                    <img src="assets/musico.jpg" alt="About us.">
+                    <img src="assets/musico.jpg" alt="musico sentado com violão">
                 </div>
                 <h3>Música Ao Vivo</h3>
             </section>
@@ -95,7 +94,7 @@
     </div>
     <div id="register" class="register">
         <h1 class="text title">REGISTRE SEU EVENTO</h1>
-        <button class="calendar-btn">entre em contato</button>
+        <button class="calendar-btn" type="button">entre em contato</button>
     </div>
     <footer class="color-1">
         <img src="assets/logo.png" class="logo footer-item" alt="Logo ExpoCulture">
