@@ -30,6 +30,8 @@
 body {
     background-color: #E5E2D0;
     margin: 0 0;
+    display: flex;
+    flex-direction: column;
 }
 
 div {
@@ -153,11 +155,11 @@ br {
 
 header {
     max-width: 100%;
-	margin: 0 auto;
+	margin: 0 0;
 	display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20%;
+    padding:10px 10%;
     position: sticky;
     top: 0px;
     background-color: #E5E2D0;
@@ -284,17 +286,22 @@ header {
     justify-content: flex-end;
 }
 
-div.cards {
+div.cards, div.cards-calendar {
     display: flex;
     padding: 32px;
     justify-content: center;
 }
 
-div.cards section.card:hover {
+div.cards-calendar {
+    flex-wrap: wrap;
+    padding: 0 10%;
+}
+
+div.cards section.card:hover, div.cards-calendar section.card:hover{
     background-color: #009495;
 }
 
-div.cards section.card {
+div.cards section.card, div.cards-calendar section.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -304,6 +311,15 @@ div.cards section.card {
     max-height: 468px;
     margin-left: 32px;
     font-family: 'PT Sans', sans-serif;
+}
+
+div.cards-calendar section.card {
+    margin: 10px;
+    justify-content: space-between;
+}
+
+div.cards-calendar section.card a:hover {
+    color: #f59435;
 }
 
 div.cards section.card:first-child {
@@ -362,6 +378,11 @@ div.cards section.card button {
     height: 65px;
 }
 
+.calendar-btn:hover {
+    background-color: #007575;
+    cursor: pointer;
+}
+
 .register {
     width: 100%;
     height: 700px;
@@ -387,6 +408,7 @@ footer {
     align-items: center;
     padding: 20px 0;
     font-family: 'PT Sans', sans-serif;
+    margin-top: auto;
 }
 
 .footer-item {
@@ -399,22 +421,38 @@ footer {
     border-left: 3px solid #F59435;
 }
 
-/* responsive details */
-
-/* @media screen and (min-width: 720px) {
-    #menu {
-        display: none;
+/* responsividade */
+@media screen and (max-width: 935px) {
+    .content-popular {
+        height: 70%;
+        width: 90%;
     }
-} */
+
+    .popular {
+        height: 330px;
+    }
+
+    div.cards-calendar section.card{
+        width: 41.66%;
+    }
+
+    #week p {
+        font-size: 1em;
+    }
+}
 
 @media screen and (max-width: 720px) {
-    div.cards {
+    div.cards, div.calendar {
         flex-direction: column;
     }
 
-    div.cards section.card {
+    div.cards section.card{
         margin-left: 0;
         margin-bottom: 32px;
+    }
+
+    div.cards-calendar section.card{
+        width: 100%;
     }
 
     div.cards section.card:last-child {
@@ -441,10 +479,6 @@ footer {
         display: none;
     }
 
-    #week p {
-        font-size: 1em;
-    }
-
     .week-text {
         align-items: center;
     }
@@ -456,16 +490,5 @@ footer {
     .info img {
         width: 100%;
         height: auto;
-    }
-}
-
-@media screen and (max-width: 935px) {
-    .content-popular {
-        height: 70%;
-        width: 90%;
-    }
-
-    .popular {
-        height: 330px;
     }
 }
