@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/3fcf9eae5f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <title>Expo Culture</title>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="assets/logo.png" alt="Logo ExpoCulture" class="logo"></a>
+            <a id="nav-popular" href="index.html#popular">POPULAR</a>
+            <a id="nav-week" href="index.html#week">NESTA SEMANA</a>
+            
+            <div class="search-box">
+                <input type="text" class="search-txt" placeholder="procurar evento"/>
+                <a href="#" class="search-button">
+                    <img src="./assets/lupa.svg" alt="Icone para abrir o campo para procurar eventos"/>
+                </a>
+            </div>
+        </header>
+
+        <div id="week" class="week-text col-6">
+            <p class="text subtitle color-1">CADASTRAR EVENTO</p>
+        </div>
+        
+        <div class="content">
+            <form id="form-event">
+                <input class="col4" type="text" id="nome" name="nome" placeholder="Nome do evento">
+                <input class="col4" type="date" id="data-hora" name="data-hora" placeholder="Data e hora do evento">
+                <div class="file">
+                    <label id="label-file" for="files">Selecionar Imagem</label>
+                    <input type="file" id="files" value="">
+                    <span id='file-name'>Nenhum arquivo selecionado</span>
+                </div>
+                <textarea class="col4" name="descricao" id="descricao" cols="30" rows="10" placeholder="Descrição do evento"></textarea>
+                <!-- <input class="col4" type="text" id="descricao" name="descricao" placeholder="Descrição do evento"> -->
+                <input class="col4" type="text" id="link" name="link" placeholder="Site ou link externo">
+                <input class="col4" type="tel" id="contact" name="contact" placeholder="Número para contato">
+                <button class="calendar-btn" type="submit" form="form-event" value="submit">Enviar</button>
+            </form>
+        </div>
+        <footer class="color-1">
+            <img src="assets/logo.png" class="logo footer-item" alt="Logo ExpoCulture">
+            <p class="footer-item">Projeto da disciplina de Desenvolvimento de Sistemas Web I - IMD - UFRN</p>
+        </footer>      
+        <script type="text/javascript" src="/js/script-register-page.js"></script>     
+    </body>
+</html>

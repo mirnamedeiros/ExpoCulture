@@ -172,6 +172,7 @@ form {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin: 30px 0;
 }
 
 form h3, h5 {
@@ -185,23 +186,58 @@ form a:hover {
     color: #F59435;
 }
 
-form input[type="text"] {
+form input, textarea {
     background-color: #9FCAB8;
     border: 1px solid #9FCAB8;
     border-radius: 30px;
     padding: 5px 20px;
     height: 45px;
-    width: 30%;
+    width: 40%;
     margin: 10px 0;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
     font-style: italic;
 }
 
-form input[type="text"]:focus {
+form input:focus, textarea:focus {
     outline: none !important;
     border:1px solid f59435;
     box-shadow: 0 2px 1px #f59435;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#label-file {
+    padding: 10px 10px;
+    background-color: #009495;
+    color: #E5E2D0;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+#label-file:hover {
+    background-color: #67afaf;
+}
+
+.file {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+    font-family: 'PT Sans', sans-serif;
+}
+.file span {
+    padding: 0 10px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
 }
 
 .container img {
@@ -485,7 +521,7 @@ footer {
         font-size: 1em;
     }
 
-    form input[type="text"] {
+    form input, .file, textarea {
         width: 50%;
     }
 }
@@ -541,7 +577,7 @@ footer {
         height: auto;
     }
 
-    form input[type="text"] {
+    form input, .file, textarea {
         width: 70%;
     }
 }
