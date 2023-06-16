@@ -380,6 +380,7 @@ div.cards-calendar {
 
 div.cards section.card:hover, div.cards-calendar section.card:hover{
     background-color: #009495;
+    cursor: pointer;
 }
 
 div.cards section.card, div.cards-calendar section.card {
