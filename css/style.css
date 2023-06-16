@@ -364,6 +364,7 @@ textarea {
     height: 80px;
     display: flex;
     justify-content: flex-end;
+    margin-top: 50px;
 }
 
 div.cards, div.cards-calendar {
@@ -502,6 +503,66 @@ footer {
     border-left: 3px solid #F59435;
 }
 
+dialog::backdrop {
+    background-color: rgb(0 0 0/ .5);
+}
+
+dialog {
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px 30px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.modal-header .close:hover {
+    cursor: pointer;
+    color: #F59435;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.modal-checks {
+    display: flex;
+    justify-content: center;
+}
+
+#reject {
+    color: #211E1F;
+    margin: 10px 3%;
+    background-color: #ED7368;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#reject:hover {
+    cursor: pointer;
+    background-color: #ff9187;
+}
+
+#accept {
+    color: #211E1F;
+    margin: 10px 3%;
+    background-color: #9FCAB8;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#accept:hover {
+    cursor: pointer;
+    background-color: #bfecd9;
+}
+
+.modal-checks i {
+    margin-right: 5px;
+}
+
+
 /* responsividade */
 @media screen and (max-width: 935px) {
     .content-popular {
@@ -579,5 +640,9 @@ footer {
 
     form input, .file, textarea {
         width: 70%;
+    }
+    
+    dialog {
+        width: 80%;
     }
 }
