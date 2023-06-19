@@ -2,21 +2,22 @@
 
 ### Utilização da API expoculture
 
-API PARA SALVAR E MANIPULAR OS EVENTOS E OUTRAS INFORMAÇÕES DO EXPOCULTURE NO BANCO DE DADOS.
+API para salvar e manipular os eventos e outras informações do **ExpoCulture** no banco de dados.
 
 ### Pré inicialização
 
-CRIAR UM BANCO DE DADOS MYSQL, SEGUE O SCRIPT:
+Criar um database no mysql, execute o script abaixo no seu banco dados:
 
 CREATE DATABASE expoculture CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-APÓS A CRIAÇÃO DO BANCO DE DADOS, MODIFICAR O ARQUIVO .env COM AS CONFIGURAÇÕES DO SEU BANCO DE DADOS.
+Após a criação do database, modifique o arquivo .env com as configurações do banco de dados.
 
-DEPOIS DE MODIFICAR O ARQUIVO, EXECUTE ESSE SCRIPT, PARA A CRIAÇÃO DAS TABELAS:
+Depois de modificar o arquivo, Execute o script abaixo para  criar as tabelas no banco da dados no terminal:
 
 npx sequelize-cli db:migrate
 
 ### Inicializar a API
 
-EXECUTAR O SCRIPT ABAIXO PARA INICIALIZAR O SERVIDOR:
+Para iniciar o servidor, execute o script abaixo no terminal:
+
 node app.js
