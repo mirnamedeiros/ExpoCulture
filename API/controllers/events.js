@@ -4,47 +4,18 @@ const router = express.Router();
 
 const db = require("./../db/models");
 
+const upload = require("../db/config/multer");
 
 router.get("/events", async (req, res) => {
 
-    const { page } = req.query;
-
-    const limit = 10;
-
-    var lastPage = 1;
-
-    const countEvent = await db.Events.count();
-
-    if(countEvent !== 0){
-        lastPage = Math.ceil(countEvent / limit);
-
-    }else {
-        return res.status(400).json({
-            mensagem: "Error: Não existe nenhum evento cadastrado",
-        });
-    }
-
     const events = await db.Events.findAll({
         attributes: ['id', 'name', 'date_event', 'path_img', 'description', 'external_link','contact_number','active'],
-        order: [['id', 'ASC']],
-        offset: Number((page * limit) - limit),
-        limit: limit
+        order: [['id', 'ASC']]
     });
 
     if(events){
-
-        var pagination = {
-            path: '/events',
-            page,
-            prev_page_url: Number(page) - 1 >= 1 ? Number(page) - 1 : false,
-            next_page_url: Number(page) + 1 >= lastPage ? false : Number(page) + 1,
-            lastPage,
-            total: countEvent
-        }
-
         return res.json({
             events,
-            pagination
         });
     }else{
         return res.status(400).json({
@@ -67,6 +38,17 @@ router.post("/events", async (req, res) => {
             mensagem: "Error: Não foi possivel cadastrar o evento!",
         });
     });
+});
+
+router.post("/events/image",upload.single('image'), async (req, res) => {   
+    try {
+        const file = await req.file;
+
+        return res.send(file.path);
+    
+    }catch(error){
+        return res.status(500).json("Erro ao salvar a imagem: " + error);
+    }
 });
 
 module.exports = router;

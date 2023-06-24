@@ -389,15 +389,25 @@ textarea {
     margin-top: 50px;
 }
 
+
 div.cards, div.cards-calendar {
     display: flex;
     padding: 32px;
     justify-content: center;
 }
 
+div.cards {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 div.cards-calendar {
     flex-wrap: wrap;
     padding: 0 10%;
+}
+
+section.card{
+    margin-top: 20px;
 }
 
 div.cards section.card:hover, div.cards-calendar section.card:hover{
