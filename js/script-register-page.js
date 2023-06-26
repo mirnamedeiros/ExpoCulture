@@ -22,21 +22,8 @@ function post(url, body){
   request.onload = function (){
     if(this.status >=200 && this.status < 300){
       console.log(this.responseText);
-    } else {
-      reject({
-        status: this.status,
-        statusText: request.statusText
-      });
-    }
+    } 
   };
-
-  request.onerror = function () {
-    reject({
-      status: this.status,
-      statusText: request.statusText
-    });
-  };
-
   
   return request.responseText;
 
@@ -56,18 +43,10 @@ function postImage(url, file){
         resolve(request.response);
         return request.response;
       } else {
-        reject({
-          status: this.status,
-          statusText: request.statusText
-        });
       }
     };
 
     request.onerror = function () {
-      reject({
-        status: this.status,
-        statusText: request.statusText
-      });
     };
     
     request.send(formData);
@@ -93,8 +72,9 @@ async function saveEvent(){
   }
 
   var dateParts = data_hora.split('-');
-  var formattedDate = dateParts[2] + '-' + dateParts[1] + '-' + dateParts[0];
+  var formattedDate = dateParts[1] + '-' + dateParts[2] + '-' + dateParts[0];
 
+  
   var pathImage = await postImage(urlImage, image.files[0]);
 
   console.log("Path ==== " + await pathImage);
@@ -112,5 +92,6 @@ async function saveEvent(){
   let responsePost = post(url, body);
 
   console.log(responsePost);
+  window.location.href='index.html';
 }
 

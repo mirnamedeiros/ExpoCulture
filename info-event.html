@@ -20,24 +20,20 @@
         
         <div class="search-box">
             <input type="text" class="search-txt" placeholder="procurar evento"/>
-            <a href="#" class="search-button">
+            <a href="#" class="search-button" onclick="location.href='search-events.html'">
                 <img src="./assets/lupa.svg" alt="Icone para abrir o campo para procurar eventos"/>
             </a>
         </div>
     </header>
-    <div class="event-info">
-        
-        <div id="week" class="week-text col-6">
-            <p class="text subtitle color-1"> Festival</p>
-        </div>
-        <div class="info">
-            <img src="assets/festival.jpg" alt="festival com pessoas dancando">
-            <p> Festival musical que acontecerá dia 13/06/2023 e contará com artistas como Aquele Lá, Fulano de Tal, Cicrano e Beltrano, e muitos outros !</p>
-        </div>
+    <div class="event-info" id="event-info">
+
     </div>
     <footer class="color-1">
         <img src="assets/logo.png" class="logo footer-item" alt="Logo ExpoCulture">
         <p class="footer-item">Projeto da disciplina de Desenvolvimento de Sistemas Web I - IMD - UFRN</p>
     </footer>
 </body>
+
+<script src="js/script-info-event.js"></script>
+
 </html>

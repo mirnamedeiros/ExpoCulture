@@ -368,12 +368,23 @@ textarea {
 }
 
 .info img {
-    width: 50%;
+    width: 40%;
     height: 100%;
 }
 
-.info p {
+.info p{
     padding: 30px;
+    width: 100%;
+}
+
+.info a{
+    padding: 30px;
+    width: 100%;
+}
+
+.info-text{
+    width: 60%;
+    display: block;
 }
 
 .week-events {
@@ -396,18 +407,14 @@ div.cards, div.cards-calendar {
     justify-content: center;
 }
 
-div.cards {
-    flex-wrap: wrap;
-    width: 100%;
+div.icon img{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 div.cards-calendar {
     flex-wrap: wrap;
     padding: 0 10%;
-}
-
-section.card{
-    margin-top: 20px;
 }
 
 div.cards section.card:hover, div.cards-calendar section.card:hover{
@@ -594,7 +601,6 @@ dialog {
 .modal-checks i {
     margin-right: 5px;
 }
-
 
 /* responsividade */
 @media screen and (max-width: 935px) {

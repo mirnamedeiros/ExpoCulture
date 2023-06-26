@@ -12,55 +12,42 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
         <title>Expo Culture</title>
     </head>
-<body>
-    <header>
-        <a href="index.html"><img src="assets/logo.png" alt="Logo ExpoCulture" class="logo"></a>
-        <!-- ao clicar vai mostrar os eventos mais populares -->
-        <a id="nav-popular" href="">POPULAR</a>
+    <body>
+        <header>
+            <a href="index.html"><img src="assets/logo.png" alt="Logo ExpoCulture" class="logo"></a>
+            <!-- ao clicar vai mostrar os eventos mais populares -->
+            <a id="nav-popular" href="">POPULAR</a>
 
-        <!-- ao clicar vai mostrar os eventos mais próximos -->
-        <a id="nav-week" href="">NESTA SEMANA</a>
-        
-        <!-- <div class="search-box">
-            <input type="text" class="search-txt" placeholder="procurar evento"/>
-            <a href="#" class="search-button">
+            <!-- ao clicar vai mostrar os eventos mais próximos -->
+            <a id="nav-week" href="">NESTA SEMANA</a>
+            
+            <!-- <div class="search-box">
+                <input type="text" class="search-txt" placeholder="procurar evento"/>
+                <a href="#" class="search-button">
+                    <img src="./assets/lupa.svg" alt="Icone para abrir o campo para procurar eventos"/>
+                </a>
+            </div> -->
+        </header>
+
+        <div class="search-box-page">
+            <input type="text" class="search-txt" placeholder="nome do evento" id="search-input"/>
+            <a href="#" class="search-button" id="search-button">
                 <img src="./assets/lupa.svg" alt="Icone para abrir o campo para procurar eventos"/>
             </a>
-        </div> -->
-    </header>
+        </div>
+        <div id="events">
 
-    <div class="search-box-page">
-        <input type="text" class="search-txt" placeholder="nome ou data do evento"/>
-        <a href="#" class="search-button">
-            <img src="./assets/lupa.svg" alt="Icone para abrir o campo para procurar eventos"/>
-        </a>
-    </div>
+        </div>
+        <footer class="color-1">
+            <img src="assets/logo.png" class="logo footer-item" alt="Logo ExpoCulture">
+            <p class="footer-item">Projeto da disciplina de Desenvolvimento de Sistemas Web I - IMD - UFRN</p>
+        </footer>
+    </body>
 
-    <div class="cards" id ="cards">
-        <section class="card">
-            <div class="icon">
-                <img src="assets/festival.jpg" alt="festival com pessoas dancando">
-            </div>
-            <h3>Festival</h3>
-        </section>
-        <section class="card">
-            <div class="icon">
-                <img src="assets/cestos.png" alt="cestos artesanais">
-            </div>
-            <h3>Feira de Artesanato</h3>
-        </section>
-        <section class="card">
-            <div class="icon">
-                <img src="assets/musico.jpg" alt="musico sentado com violão">
-            </div>
-            <h3>Música Ao Vivo</h3>
-        </section>
-    </div>
-    <footer class="color-1">
-        <img src="assets/logo.png" class="logo footer-item" alt="Logo ExpoCulture">
-        <p class="footer-item">Projeto da disciplina de Desenvolvimento de Sistemas Web I - IMD - UFRN</p>
-    </footer>
-</body>
-<script src="js/script-search-events.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" 
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+    <script src="js/script-search-events.js"></script>
 
 </html>
