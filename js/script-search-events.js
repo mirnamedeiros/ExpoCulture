@@ -66,11 +66,12 @@ function render(list){
                         </section>
                         `;
             
-            if(count == 2){
-                listString += `</div>`;
-            }
-
             count++;
+
+            if(count == 3){
+                listString += `</div>`;
+                count = 0;
+            }
         }
     });
     eventsHtml.innerHTML = listString;
