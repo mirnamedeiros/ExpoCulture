@@ -38,7 +38,8 @@ function render(eventObj){
                         <div class="info-text">
                             <p class="text">${eventObj.description}</p>
                             <p class="text">${eventObj.date_event}</p>
-                            <a class="text" href="${eventObj.external_link}">Saiba mais</a>
+                            <p class="text">${eventObj.contact_number ? eventObj.contact_number  : ''}</p>
+                            <a class="text" href="${eventObj.external_link ? eventObj.external_link : '#'}">Saiba mais</a>
                         <div>
                     </div>
                 `;
