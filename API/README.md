@@ -12,7 +12,9 @@ CREATE DATABASE expoculture CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 Após a criação do database, modifique o arquivo .env com as configurações do banco de dados.
 
-Depois de modificar o arquivo, Execute o script abaixo para  criar as tabelas no banco da dados no terminal:
+Depois de modificar o arquivo, Execute os scripts abaixo para instalar as dependencias do node e também criar as tabelas no banco da dados no terminal:
+
+npm install
 
 npx sequelize-cli db:migrate
 
